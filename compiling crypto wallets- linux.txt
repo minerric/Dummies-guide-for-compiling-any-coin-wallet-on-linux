@@ -1,0 +1,63 @@
+I have seen so many people having issues with installing the linux version, so i decided to list a setup a guide.
+This is also due to some errors I found while installing mine, so this should make it easier for everyone!
+
+These are the dependencies listed on most coin repository
+
+Dependency Build Instructions: Ubuntu & Debian
+----------------------------------------------
+sudo apt-get install build-essential
+sudo apt-get install libssl-dev
+sudo apt-get install libdb++-dev
+sudo apt-get install libboost-all-dev
+sudo apt-get install libqrencode-dev
+
+I have included some extras that help bypass some of the issues and are not mentioned as dependencies on the documentation of most coins.
+
+sudo apt-get install libtool autotools-dev automake pkg-config libevent-dev bsdmainutils libgmp3-dev
+
+On at least Ubuntu 14.04+ and Debian 7+ there are generic names for the individual boost development packages, so the following can be used to only install necessary parts of boost:
+
+sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+
+
+This is a must to avoid errors
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+sudo apt-get install libminiupnpc-dev
+sudo apt-get install libzmq3-dev
+
+git clone https://github.com/bitcoin-core/secp256k1.git
+
+cd secp256k1/
+./autogen.sh
+./configure
+  make
+./tests
+sudo make install  # optional
+
+git clone <your coin wallet repository>
+cd /<your coin name>/src
+make -f makefile.unix
+
+Some coin will have different method of installing.
+
+cd <your coin name>/
+./autogen.sh
+./configure
+  make
+sudo make install  # optional
+
+ 
+ all should be installed and you can start your daemon
+ 
+ ./<your coind> -daemon
+ 
+If this helped you in any way donations are welcome
+
+BTC= 3CGvrKXyUv3SbE56kyxeGYisZ9sDusNmzr
+ETH= 0xEc81cA97f386De7aDCDFC17688ef95f5D57FcC8a
+BCH= 1ETssVxUCSR6QQjJWA4yvVdsSdWA3RfHXj
