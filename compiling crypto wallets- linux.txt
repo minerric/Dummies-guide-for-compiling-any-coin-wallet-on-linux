@@ -1,6 +1,8 @@
 I have seen so many people having issues with installing the linux version, so i decided to list a setup a guide.
 This is also due to some errors I found while installing mine, so this should make it easier for everyone!
 
+This guide assumes you already have a vps ordered and putty connected to it as root
+
 These are the dependencies listed on most coin repository
 
 Dependency Build Instructions: Ubuntu & Debian
@@ -59,4 +61,53 @@ sudo make install  # optional
  all should be installed and you can start your daemon
  
  ./<your coind> -daemon
+ 
+ ####################################################################
+ If your intention is to setup a masternode then please make sure you do not hold coins on VPS
+ 
+ On Windows or Mac wallet oer even Linux if you use desktop edition.
+ 
+ Send the required amount of coins for the masternode
+ Generate a private key on your local wallet and create the configuration file accordingly
+ 
+ on the vps side once you synced your wallet go to:
+ 
+ cd /root/.<coin_name>
+ nano <coin_name>
+
+this will open config file all you need to do is paste the following and amend accordingly
+
+rpcuser=yourusername
+rpcpassword=yourpassword
+rpcallowip=127.0.0.1
+daemon=1
+server=1
+listen=1
+masternodeaddr=x.x.x.x:11453
+masternode=1
+masternodeprivkey=privatekey
+
+please make sure that the info for the masternode section matches your local wallet on your computer.
+
+once this is done press 
+CTRL x
+
+then press y and press ENTER
+
+Go back to your wallet/src directory stop the daemon and restart it again.
+
+now vps side is done we need to go to the local wallet to start the masternode.
+
+if you only have 1 masternode in your wallet go to console and type
+
+masternode start
+
+if you have more than one you can run a simlar command
+
+masternode start-alias <name_of_alias>
+
+happy masternoding
+
+ 
+ 
  
