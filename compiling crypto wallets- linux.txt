@@ -3,6 +3,22 @@ This is also due to some errors I found while installing mine, so this should ma
 
 This guide assumes you already have a vps ordered and putty connected to it as root
 
+First some basics.
+
+Create a Swap File - Low Ram Servers
+ sudo fallocate -l 4G /swapfile
+ sudo chmod 600 /swapfile
+ sudo mkswap /swapfile
+ sudo swapon /swapfile
+ sudo nano /etc/fstab
+
+Add to fstab file by using arrow down and pasting the following on the file after all that already is there
+/swapfile   none    swap    sw    0   0
+
+once done press CTRL x
+press y
+press enter  # done
+
 These are the dependencies listed on most coin repository
 
 Dependency Build Instructions: Ubuntu & Debian
