@@ -83,7 +83,7 @@ rpcallowip=127.0.0.1
 daemon=1
 server=1
 listen=1
-masternodeaddr=x.x.x.x:11453
+masternodeaddr=x.x.x.x:PORT
 masternode=1
 masternodeprivkey=privatekey
 
