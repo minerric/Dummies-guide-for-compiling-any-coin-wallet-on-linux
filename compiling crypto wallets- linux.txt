@@ -65,7 +65,7 @@ sudo make install  # optional
  ####################################################################
  If your intention is to setup a masternode then please make sure you do not hold coins on VPS
  
- On Windows or Mac wallet oer even Linux if you use desktop edition.
+ On Windows or Mac wallet or even Linux if you use desktop edition.
  
  Send the required amount of coins for the masternode
  Generate a private key on your local wallet and create the configuration file accordingly
