@@ -62,7 +62,7 @@ sudo make install  # optional
 cd ..
 
 git clone <your coin wallet repository>
-cd /<your coin name>/src
+cd <your coin name>/src
 make -f makefile.unix
 
 Some coin will have different method of installing.
