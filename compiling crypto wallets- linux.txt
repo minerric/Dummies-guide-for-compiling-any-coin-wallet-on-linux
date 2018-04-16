@@ -3,6 +3,11 @@ This is also due to some errors I found while installing mine, so this should ma
 
 This guide assumes you already have a vps ordered and putty connected to it as root
 
+Note: any info inside <> is meant to be replaced to your coin specific name or repo! DO NOT JUST COPY AND PASTE FROM THIS GUIDE
+ ./<your coind> -daemon will need to be changed to something like ./dashd -daemon for example.
+<your coin wallet repository> will need to be replaced by the link to the repository of the coin you are trying to setup.
+
+
 First some basics.
 
 Create a Swap File - Low Ram Servers
@@ -84,7 +89,7 @@ sudo make install  # optional
  On Windows or Mac wallet or even Linux if you use desktop edition.
  
  Send the required amount of coins for the masternode
- Generate a private key on your local wallet and create the configuration file accordingly
+ Generate a private key on your local wallet get the masternode outputs and create the configuration file accordingly
  
  on the vps side once you synced your wallet go to:
  
@@ -124,6 +129,5 @@ masternode start-alias <name_of_alias>
 
 happy masternoding
 
- 
- 
- 
+
+Note: any info inside <> is meant to be replaced to your coin specific name or repo! 
