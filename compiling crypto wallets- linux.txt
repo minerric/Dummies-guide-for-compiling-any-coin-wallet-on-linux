@@ -29,7 +29,7 @@ These are the dependencies listed on most coin repository
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
 sudo apt-get install build-essential -y
-sudo apt-get install libssl-dev -y
+sudo apt-get install libssl1.0-dev -y
 sudo apt-get install libdb++-dev -y
 sudo apt-get install libboost-all-dev -y
 sudo apt-get install libqrencode-dev -y
